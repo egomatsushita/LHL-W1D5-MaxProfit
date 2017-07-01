@@ -1,0 +1,19 @@
+{
+  "name": "max-profit",
+  "version": "1.0.0",
+  "description": "a function that return the maximum profit",
+  "main": "max-profit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "max",
+    "profit"
+  ],
+  "author": "Eduardo Go Matsushita",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
+  }
+}
