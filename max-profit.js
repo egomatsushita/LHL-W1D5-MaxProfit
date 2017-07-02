@@ -15,7 +15,7 @@ function maxProfit(prices, aMaximumProfit=0) {
   var profit = 0;
 
   if(noOfElements === 1) {
-    return maximumProfit;
+    return maximumProfit === 0 ? -1 : maximumProfit;
   } else {
     for(var i = 0; i < noOfElements - 1; i++) {
       console.log(i + ' price: ' + prices[i] + ' last price: ' + lastPrice);
