@@ -11,24 +11,20 @@ function maxProfit(prices, aMaximumProfit=0) {
   // base case: pricesArray.length = 2
   var maximumProfit = aMaximumProfit;
   var noOfElements = prices.length;
-  var lastPrice = prices[noOfElements - 1];
+  var lastPrice = prices[noOfElements - 1]; // last price in the prices array
   var profit = 0;
 
-  if(noOfElements === 1) {
+  if(noOfElements === 1 || noOfElements === 0) {
     return maximumProfit === 0 ? -1 : maximumProfit;
   } else {
     for(var i = 0; i < noOfElements - 1; i++) {
-      console.log(i + ' price: ' + prices[i] + ' last price: ' + lastPrice);
       profit = lastPrice - prices[i];
-      console.log(`\tprofit: ${profit} x max: ${maximumProfit}`);
       if(profit > maximumProfit) {
         maximumProfit = profit;
-        console.log(`\t\tmax: ${maximumProfit}`);
       }
     }
   }
   return maxProfit(prices.slice(0, noOfElements - 1), maximumProfit);
 }
 
-console.log(maxProfit([45, 24, 35, 31, 40, 38, 11]));
-console.log(maxProfit([45, 24, 21, 11, 9, 5]));
+module.exports = maxProfit;
